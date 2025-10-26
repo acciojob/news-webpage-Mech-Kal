@@ -1,1 +1,123 @@
-/*  your css code here. If applicable */
+/* 5. Apply provided colors to header and body */
+:root {
+    --header-bg: #011e29;
+    --body-bg: #f5f5f5;
+    --section-bg: #ffffff;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--body-bg);
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* 2. Header Styling */
+.header {
+    background-color: var(--header-bg);
+    color: #ffffff;
+    text-align: center; /* Center alignment */
+    padding: 20px 0; /* Padding */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+/* Container for main content, centered on the page */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Three-Column Layout using Flexbox */
+.main-content-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Ensures columns start from the top */
+}
+
+/* Common styling for the three main sections */
+.latest-news-section, 
+.main-article-section, 
+.pictorial-news-section {
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto; /* Allow height to adjust based on content */
+}
+
+/* 3. Latest News Section Styling (Left Column) */
+.latest-news-section {
+    flex: 0 0 250px; /* Fixed width for the latest news column */
+    max-width: 250px;
+}
+
+.latest-news-section h3 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.latest-news-section ul {
+    list-style-type: disc; /* Use bullet points as shown in image */
+    padding-left: 20px;
+    margin: 0;
+}
+
+.latest-news-section li {
+    margin-bottom: 10px;
+}
+
+/* Main Article Section Styling (Middle Column) */
+.main-article-section {
+    flex-grow: 1; /* Takes up remaining available space */
+    min-width: 400px;
+}
+
+.main-article-section h2 {
+    margin-top: 0;
+    color: #cc0000;
+}
+
+.main-article-section p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 4. Pictorial News Section Styling (Right Column) */
+.pictorial-news-section {
+    flex: 0 0 300px; /* Fixed width for the pictorial news column */
+    max-width: 300px;
+    text-align: center; /* Content centered */
+}
+
+.pictorial-news-section h3 {
+    margin-top: 0;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.news-image-item {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.news-image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
